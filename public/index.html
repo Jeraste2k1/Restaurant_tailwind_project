@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Tailwind restaurant</title>
+  </head>
+  <body class="font-madimi">
+    <div class="text-gray-700 grid md:grid-cols-4">
+      <div class="md:col-span-1 md:flex md:justify-end">
+        <nav class=" text-right px-3">
+          <div class="flex border-b border-gray-300 justify-between items-center">
+            <h1
+              class="p-4 uppercase font-bold text-gray-900 hover:text-gray-950"><a
+                href>Mon super restaurant</a>
+              </h1>
+              <div id="buttonMenu" >
+                <svg class="w-6 md:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+                
+              </div>
+          </div>
+          
+          <ul class="hidden md:block" id="menu">
+            <li class="font-bolf text-gray-900"><a
+                href="#" class="flex justify-end border-r-4 border-primary"><span>Accueil</span> <svg class="w-4 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                </svg>
+                </a></li>
+            <li><a href="#" class="flex justify-end border-r-4 border-white"><span>A-propos</span><svg class="w-4 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
+            </svg>
+            </a></li>
+            <li><a href="#" class="flex justify-end border-r-4 border-white"><span>Contacter-Nous</span> <svg class="w-4 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 9v.906a2.25 2.25 0 0 1-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 0 0 1.183 1.981l6.478 3.488m8.839 2.51-4.66-2.51m0 0-1.023-.55a2.25 2.25 0 0 0-2.134 0l-1.022.55m0 0-4.661 2.51m16.5 1.615a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V8.844a2.25 2.25 0 0 1 1.183-1.981l7.5-4.039a2.25 2.25 0 0 1 2.134 0l7.5 4.039a2.25 2.25 0 0 1 1.183 1.98V19.5Z" />
+            </svg>
+            </a></li>
+          </ul>
+        </nav>
+      </div>
+      <main class="px-16 py-6 bg-slate-100 md:col-span-3">
+        <div class="flex justify-center md:justify-end ">
+          <a href class="text-red-500 btn  border-primary border-2 hover:bg-primary hover:text-white transition easy-out duration-500">Se Connecter</a>
+          <a href class="text-red-500 ml-6 btn  border-primary  border-2 hover:bg-primary hover:text-white transition easy-out duration-500">Créer un compte</a>
+        </div>
+        <header>
+          <h2 class="text-gray-900 text-3xl"> les recettes</h2>
+          <h3>Pour les tailwinders</h3>
+          <div>
+            <h4 class="mt-12 border-b border-gray-400">Les derniers
+              recettes</h4>
+            <div class="mt-8  grid  lg:grid-cols-3 gap-8"> <!--  div de card des derniers recettes -->
+
+              <div class="card">
+                <img class="w-full object-cover h-36 sm:h-48" src="assets/img/steak.jpg" alt>
+                <div class="m-5">
+                  <span>Steak Frites</span>
+                  <span class="block text-gray-400 text-sm">Recette par Jason Eraste</span>
+                </div>
+                <div class="badge">
+                  <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                  </svg>
+                  
+                  <span>
+                    15 Mn
+                  </span>
+                </div>
+              </div>
+              <div class="card">
+                <img class="w-full object-cover h-36 sm:h-48" src="assets/img/salade.jpg" alt>
+                <div class="m-5">
+                  <span>Salade</span>
+                  <span class="block text-gray-400 text-sm">Recette par Eraste</span>
+                </div>
+                <div class="badge">
+                  <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                  </svg>
+                  <span>
+                    10 Mn
+                  </span>
+                </div>
+              </div>
+              <div class="card">
+                <img class="w-full object-cover h-36 sm:h-48" src="assets/img/soupe.jpg" alt>
+                <div class="m-5">
+                  <span>Soupe</span>
+                  <span class="block text-gray-400 text-sm">Recette par Winner</span>
+                </div>
+                <div class="badge">
+                  <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                  </svg>
+                  <span>
+                    18 Mn
+                  </span>
+                </div>
+              </div>
+            </div>
+            <h4 class="mt-12 border-b border-gray-400">Les plus populaires</h4>
+            <div class="mt-8">  <!-- card recettes les plus polpulaire -->
+            </div>
+            <div class="flex justify-center">
+
+              <div class="bg-gray-400 text-gray-800 btn hover:shadow-inner transform hover:scale-125 transition easy-out duration-75 hover:opacity-50">
+               <span class="hover:shadow-inner">voir plus</span> 
+              </div>
+            </div>
+          </div>
+        </header>
+      </main>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
