@@ -1,191 +1,167 @@
+/* Responsive Grid et Flexbox */
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
 
 :root {
-    --violet:#d33bfd;   /* Création d'une variable violet pour l'utiliser dans  le site*/
+    --violet:#d33bfd;
 }
 
-
-
-body
-{ font-family: 'Montserrat', sans-serif;
-  margin: 0;
-  color: white;
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    color: white;
 }
-header
-{
+
+header {
     background: linear-gradient(#13181d,#20212e,#341b47);
 }
-header nav
-{
-    padding: 30px 5% 0 5% ; /* une marge  de 30 px en haut et de 5% à gauche et à droite à l'intérieur de la barre de navigation*/
-    display: flex; /*Aligner les éléments qui sont enfants de nav */
-    flex-wrap: wrap; /* Mettre à la ligne si il n'ya plus d'espace , genre dans un format téléphone */ 
-    justify-content: space-between; /* Mettre un grand espace entre les items(enfants) du nav */
-    align-items: center; /* Pour bien aligner les éléments de notre barre de navigation */ 
+
+header nav {
+    padding: 30px 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
-  header nav h1
-  {
+
+header nav h1 {
     margin: 0;
-    text-transform: uppercase; /*Pour mettre en majuscule le h1*/
+    text-transform: uppercase;
     color: var(--violet);
-  }
-  header nav .right
-  {
-    display: flex; /*Aligner les éléments qui sont enfants de la classe right  */
-    align-items: center;/*Pour centrer les éléments dans la div right*/
-  }
-  header nav .right a
-  {
+}
+
+header nav .right {
+    display: flex;
+    align-items: center;
+}
+
+header nav .right a {
     margin: 0 15px 0 0;
     color: white;
-    text-decoration: none; /*Pour enlever les traits de surlignement au niveau du lien*/
-  }
-  header nav .right a:hover  /* Effet lors du passage de la souris sur le lien*/
-  {
-    color: var(--violet);
-  }
+    text-decoration: none;
+}
 
-  header nav .right button
-  {
+header nav .right a:hover {
+    color: var(--violet);
+}
+
+header nav .right button {
     padding: 5px 15px;
     font-size: 18px;
-    background-color: inherit;/* inherit pour dire que le background color du boutton sera la même que celui de son parent header*/ 
+    background-color: inherit;
     border: 1px solid var(--violet);
-    color: var(--violet);/*couleur du button*/
-    border-radius: 8px; /*Pour arrondis les bords du button*/
-    cursor: pointer;/* Chnger la forme du curseur*/
-    transition: color 0.10s, background-color 0.10s;/*Quand je passe mon curseur sur le button , sa couleur deviens blanche et son arrière plan deviens violet
-*/
+    color: var(--violet);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: color 0.10s, background-color 0.10s;
 }
 
-header nav .right button:hover
-{
-    color:white;
+header nav .right button:hover {
+    color: white;
     background-color: var(--violet);
-} 
-
-
-
-/*============================= section Présentation============================================*/
-
-/* La section presentation a deux items(div) qui sont :  presentation-produit et images*/
-/* Dans presentation produit, nous avons un h1, un p, un boutton  et trois images de la class small image*/
-/*Au niveau de l'item image, nous avons juste une image qui est le casque en grand format*/
-.presentation
-{
-  padding: 30px 5%;
-  display:flex; /* Aligner les items enfants de la div présentation*/
-  align-items: center;/*pour centrer les items de la section presentation*/
-
-}
-.presentation .presentation-produit
-{
-  width: 100%;
-  flex-shrink: 3;
-}
-.presentation .presentation-produit h1
-{
-  margin: 0;
-  font-size: 4vw;/*il prend 4% de la largeur de toute la page*/
 }
 
-.presentation .presentation-produit button
-{
-  margin-top: 20px;
-  padding:15px 20px ;/*espace à l'intérieur du boutton*/
-  border-radius: 12px;
-  border: 1px solid var(--violet);
-  color: white;
-  background-color: var(--violet);
-  font-size: medium; 
-  cursor: pointer; 
+/* Présentation Section */
+
+.presentation {
+    padding: 30px 5%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-.first .presentation-produit .small-images /* nous travaillons mainteant sur la classe first qui contient la class small image, qui lui même contient les items small*/
-{
-  margin-top: 30px;
-  display: flex;
-  align-items: center;
-}
-.first .presentation-produit .small-images .small
-{
-  padding: 20px;
-  background-color: #33314d;
-  margin: 0 15px;/* pour mettre de l'espace entre les petites images de casques*/
-  border-radius: 28px;
+.presentation .presentation-produit {
+    flex: 1 1 50%;
+    padding-right: 20px;
 }
 
-/*Nous voulons faire baisser la luminosité (filtrer la luminosité) lorsque le cursor passes sur les small-images*/
-
-.first .presentation-produit .small-images .small:hover
-{
-  filter: brightness(50%);
+.presentation .presentation-produit h1 {
+    margin: 0;
+    font-size: 4vw;
 }
 
-.first .presentation-produit .small-images .small img /*nous avons appliqué une taille aux balises img se trouvant dans la class small qui lui même est un item de small-images*/
-{
-  width: 120px;
+.presentation .presentation-produit button {
+    margin-top: 20px;
+    padding: 15px 20px;
+    border-radius: 12px;
+    border: 1px solid var(--violet);
+    color: white;
+    background-color: var(--violet);
+    font-size: medium;
+    cursor: pointer;
 }
 
-/*===========================seconde section===========================================*/
-
-.second
-{
-  background-color:#33314d;
+.first .presentation-produit .small-images {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
-/* Définir l'animation de clignotement */
-@keyframes blink {
-  
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-  
+.first .presentation-produit .small-images .small {
+    padding: 20px;
+    background-color: #33314d;
+    border-radius: 28px;
 }
 
-/* Appliquer l'animation à l'élément de texte */
-
-
-.presentation .presentation-produit .new
-{
-  animation: blink 1s ease-in-out infinite;
-  font-size:30px;
-  font-weight: 6px bold;
-  color:var(--violet);
+.first .presentation-produit .small-images .small img {
+    width: 100%;
+    max-width: 120px;
 }
 
-/*=======================FOOTER============================================*/
-
-footer
-{
-  margin: 0;
-  background-color: black;
-  display: flex;
-  justify-content: space-around;
-
-}
-footer h3
-{
-  color: var(--violet);
+.presentation .image {
+    flex: 1 1 50%;
+    text-align: center;
 }
 
-footer p
-{
-  cursor: pointer;
+.presentation .image img {
+    max-width: 100%;
+    height: auto;
 }
 
+.second {
+    background-color: #33314d;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px 5%;
+}
 
+.second .presentation-produit {
+    flex: 1 1 50%;
+    padding-right: 20px;
+}
 
+.second .image {
+    flex: 1 1 50%;
+    text-align: center;
+}
 
+/* Footer */
 
+footer {
+    margin: 0;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px 5%;
+}
 
-/*===========================Media Query======================================*/
+footer .column {
+    flex: 1 1 30%;
+    margin-bottom: 20px;
+}
+
+footer h3 {
+    color: var(--violet);
+}
+
+footer p {
+    cursor: pointer;
+}
+
+/* Media Queries pour les petits écrans */
 
 @media (max-width: 768px) {
     header nav {
@@ -193,55 +169,34 @@ footer p
         align-items: flex-start;
         padding: 20px 5%;
     }
+
     header nav .right {
         flex-direction: column;
         align-items: flex-start;
         margin-top: 10px;
     }
+
     header nav .right a {
         margin: 10px 0;
     }
-}
 
-
-@media (max-width: 768px) {
     .presentation {
         flex-direction: column;
-        align-items: flex-start;
         padding: 20px 5%;
     }
-    .presentation .presentation-produit {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-    .first .presentation-produit .small-images {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .first .presentation-produit .small-images .small {
-        margin: 10px 0;
-    }
-}
 
-.second {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    padding: 30px 5%;
-}
-
-@media (max-width: 768px) {
     .second {
-        grid-template-columns: 1fr;
-    }@media (max-width: 768px) {
+        flex-direction: column;
+    }
+
     footer {
         flex-direction: column;
         align-items: center;
         padding: 20px 5%;
     }
-    footer h3, footer p {
-        margin-bottom: 10px;
-    }
-}
 
+    footer .column {
+        flex: 1 1 100%;
+        text-align: center;
+    }
 }
